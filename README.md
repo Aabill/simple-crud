@@ -17,7 +17,7 @@
 	```
 	php artisan db:seed
 	```
-	> User will be created with login credentials
+	-	User will be created with login credentials
 		* email: `g.john@simplecrud.com`
 		* password: `T3sting123`
 
