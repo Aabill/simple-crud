@@ -7,27 +7,27 @@
 	```
 * Install composer packages
 	```
-		composer install
+	composer install
 	```
 * Setup Database and Migrate
 	```
-		php artisan migrate
+	php artisan migrate
 	```
 * Seed Database
 	```
-		php artisan db:seed
+	php artisan db:seed
 	```
-	User will be created with login credentials
-		- email: `g.john@simplecrud.com`
-		- password: `T3sting123`
+	> User will be created with login credentials
+		* email: `g.john@simplecrud.com`
+		* password: `T3sting123`
 
 * Serve
-	- Open two terminals and run these separately
+	> Open two terminals and run these separately
 		```
-			npm run dev
+		npm run dev
 		```
 		```
-			php artisan serve
+		php artisan serve
 		```
 
 
