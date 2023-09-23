@@ -3,7 +3,7 @@
 #### Setup 
 * Install npm packages
 	```
-		npm i
+	npm i
 	```
 * Install composer packages
 	```
