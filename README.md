@@ -25,7 +25,7 @@
 	> Open two terminals and run separately
 		
 		1. ```
-		npm run dev
+			npm run dev
 		```
 
 		2.```
