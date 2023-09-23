@@ -24,11 +24,11 @@
 * Serve
 	> Open two terminals and run separately
 		
-		```
+		1.```
 		npm run dev
 		```
-		
-		```
+
+		2.```
 		php artisan serve
 		```
 
