@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
 						$table->integer('user_id');
 						$table->string('title');
-						$table->string('description');
+						$table->longText('description');
 						$table->string('location');
+						$table->timestamps();
         });
     }
 
