@@ -22,11 +22,12 @@
 		* password: `T3sting123`
 
 * Serve
-	> Open two terminals and run these separately
-		```
+	> Open two terminals and run separately
+		
+	- ```
 		npm run dev
 		```
-		```
+	- ```
 		php artisan serve
 		```
 
