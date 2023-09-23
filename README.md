@@ -2,24 +2,24 @@
 
 #### Setup 
 * Install npm packages
-		```
-			npm i
-		```
+	```
+		npm i
+	```
 * Install composer packages
-		```
-			composer install
-		```
+	```
+		composer install
+	```
 * Setup Database and Migrate
-		```
-			php artisan migrate
-		```
+	```
+		php artisan migrate
+	```
 * Seed Database
-		```
-			php artisan db:seed
-		```
-		User will be created with login credentials
-			- email: `g.john@simplecrud.com`
-			- password: `T3sting123`
+	```
+		php artisan db:seed
+	```
+	User will be created with login credentials
+		- email: `g.john@simplecrud.com`
+		- password: `T3sting123`
 
 * Serve
 	- Open two terminals and run these separately
