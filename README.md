@@ -24,7 +24,7 @@
 * Serve
 	> Open two terminals and run separately
 		
-		1.```
+		1. ```
 		npm run dev
 		```
 
