@@ -31,11 +31,11 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::middleware('auth')->prefix('store')->group(function () {
-	Route::get('/', [StoreController::class, 'index'])->name('store.index');
-	Route::get('/add', [StoreController::class, 'add'])->name('store.add');
-	Route::post('/create', [StoreController::class, 'create'])->name('store.create');
-	Route::get('/edit/{id}', [StoreController::class, 'edit'])->name('store.edit');
-	Route::patch('/edit/{id}', [StoreController::class, 'update'])->name('store.update');
-	Route::delete('/delete/{id}', [StoreController::class, 'delete'])->name('store.delete');
+Route::middleware('auth')->prefix('stores')->group(function () {
+	Route::get('/', [StoreController::class, 'index'])->name('stores');
+	Route::get('/add', [StoreController::class, 'add'])->name('stores.add');
+	Route::post('/create', [StoreController::class, 'create'])->name('stores.create');
+	Route::get('/edit/{id}', [StoreController::class, 'edit'])->name('stores.edit');
+	Route::patch('/edit/{id}', [StoreController::class, 'update'])->name('stores.update');
+	Route::delete('/delete/{id}', [StoreController::class, 'delete'])->name('stores.delete');
 });

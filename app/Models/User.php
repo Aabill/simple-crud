@@ -45,7 +45,10 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-		public function store(): HasMany {
+		public function stores(): HasMany {
 			return $this->hasMany(Store::class);
+		}
+		public function store($id): Store {
+			return $this->stores()->where('id', $id)->first();
 		}
 }

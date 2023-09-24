@@ -17,6 +17,7 @@ return new class extends Migration
 						$table->string('title');
 						$table->longText('description');
 						$table->string('location');
+						$table->boolean('delete')->default(false);
 						$table->timestamps();
         });
     }

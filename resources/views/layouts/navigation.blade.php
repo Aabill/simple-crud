@@ -13,8 +13,11 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                      <x-heroicon-o-view-columns class="h-5 w-5 mr-1"/>  {{ __('Dashboard') }}
                     </x-nav-link>
+										<x-nav-link :href="route('stores')" :active="request()->routeIs('stores')">
+											<x-heroicon-o-building-storefront class="h-5 w-5 mr-1"/> {{ __('Stores') }}
+									</x-nav-link>
                 </div>
             </div>
 
@@ -68,8 +71,11 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+              <x-heroicon-o-view-columns class="h-5 w-5 mr-1 inline-flex"/>  {{ __('Dashboard') }}
             </x-responsive-nav-link>
+						<x-responsive-nav-link :href="route('stores')" :active="request()->routeIs('stores')">
+							<x-heroicon-o-building-storefront class="h-5 w-5 mr-1 inline-flex"/> {{ __('Stores') }}
+					</x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
