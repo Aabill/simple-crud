@@ -16,6 +16,7 @@ class Table extends Component
 	public $perpage = 5;
 	public $checkbox = [];
 	public $trash = [];
+	public $checkered = [];
 
 	use WithPagination;
 
@@ -54,15 +55,4 @@ class Table extends Component
 			$this->redirect(url()->previous());
 		}
 
-		public function checkAll($ids) {
-			$ids = explode(',', $ids);
-			// foreach(range(0, $this->perpage - 1) as $r) {
-			// 	array_push($keys[$r])
-			// }
-			// // $this->checkbox = collect($this->checkbox)->;
-			// // $this->trash = [];
-			foreach ($ids as $key => $id) {
-				$this->toggleCheck($id, $key);
-			}
-		}
 }
