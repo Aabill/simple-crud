@@ -25,7 +25,7 @@ class StoreFactory extends Factory
 			}
       return [
         'title' =>  $this->title,
-				'description' => fake()->paragraph(),
+				'description' => fake()->sentence(7),
 				'location' => fake()->address()
       ];
     }

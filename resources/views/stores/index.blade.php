@@ -3,7 +3,10 @@
 			<h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight flex justify-between">
 				<span class="block">{{ __('Stores') }}</span>
 				<a href="{{ route('stores.add') }}">
-					<x-primary-button><span class="block">{{ __('Add') }}</span></x-primary-button>
+					<x-primary-button>
+						<x-heroicon-o-plus-circle class="w-5 h-5 mr-1"></x-heroicon-o-plus-circle>
+						<span class="block">{{ __('Add') }}</span>
+					</x-primary-button>
 				</a>
 				
 			</h2>

@@ -13,7 +13,7 @@ class Table extends Component
 	public User $user;
 	public string $model;
 	
-	public $perpage = 10;
+	public $perpage = 5;
 	public $checkbox = [];
 	public $trash = [];
 
@@ -37,7 +37,11 @@ class Table extends Component
 				$this->trash[$id] = true;
 			} else {
 				$this->checkbox[$key] = !$this->checkbox[$key];
-				$this->trash[$id] = !$this->trash[$id];
+				if (isset($this->trash[$id]) && $this->trash[$id]) {
+					unset($this->trash[$id]);
+				} else {
+					$this->trash[$id] = true;
+				}
 			}
 			$this->trash = collect($this->trash)->filter(fn($t) => $t === true);
 		}
