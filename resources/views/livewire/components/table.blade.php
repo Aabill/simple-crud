@@ -7,7 +7,7 @@
 									@if (count($trash) > 0)
 									<div class="text-gray-600 dark:text-gray-300 flex relative" >
 										<button wire:click.self="deleteTrash" class="shadow-sm rounded dark:border-gray-500 p-1 border flex mx-auto hover:bg-red-500 hover:border-gray-300 transition-all ease-linear duration-100 group ">
-											<x-heroicon-o-trash class="h-5 w-5 inline-block transform group-hover:-translate-y-[1px] transition-all ease-linear duration-100"/>
+											<x-heroicon-o-trash wire:click.self="deleteTrash" class="h-5 w-5 inline-block transform group-hover:-translate-y-[1px] transition-all ease-linear duration-100"/>
 										</button>
 										<span v-show="!showClearTrash" class="absolute rounded-full px-1.5 text-[12px] bg-red-500 -top-1 right-2 font-bold border border-gray-300" x-on:mouseenter.debounce.200ms="showClearTrash = true">
 											{{ count($trash) }}
