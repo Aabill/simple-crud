@@ -6,29 +6,29 @@
         @csrf
 
         <!-- Email Address -->
-        <div x-data class="relative group" x-ref="loginEmail">
+        <div x-data="{emailFocus: false}" class="relative group" x-bind:class="{'is-focused': emailFocus}">
             <x-input-label class="absolute top-2 left-2 cursor-text group-[.is-focused]:-top-2 group-[.is-focused]:left-4  group-[.is-focused]:rounded-md group-[.is-focused]:px-1 group-[.is-focused]:pb-[0.5px] group-[.is-focused]:text-[11px] group-[.is-focused]:bg-gray-800  transition-all ease-linear duration-100" for="email" :value="__('Email')" />
             <x-text-input id="email" 
 							x-init="$nextTick(() => { if($el.tagName == 'INPUT') $refs.loginEmail.classList.add('is-focused') });"
-							x-on:focus="$refs.loginEmail.classList.add('is-focused');" 
+							x-on:focus="emailFocus = true" 
 							x-on:blur="
-							if ($event.target.value) return;
-							$refs.loginEmail.classList.remove('is-focused')"
+							if ($event.target.value !== '') return;
+							emailFocus = false"
 							class="block mt-1 w-full " type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
-        <div x-data class="mt-4 relative group" x-ref="loginPassword">
+        <div x-data="{loginFocus:false}" class="mt-4 relative group" x-bind:class="{'is-focused' : loginFocus}">
             <x-input-label for="password" :value="__('Password')" 
 						class="absolute top-2 left-2 cursor-text group-[.is-focused]:-top-2 group-[.is-focused]:left-4  group-[.is-focused]:rounded-md group-[.is-focused]:px-1 group-[.is-focused]:pb-[0.5px] group-[.is-focused]:text-[11px] group-[.is-focused]:bg-gray-900  transition-all ease-linear duration-100"/>
 
             <x-text-input id="password" class="block mt-1 w-full"
 						x-on:focus="
-						$refs.loginPassword.classList.add('is-focused');" 
+						loginFocus = true;"
 						x-on:blur="
 						if ($event.target.value) return;
-						$refs.loginPassword.classList.remove('is-focused');"
+						loginFocus = false"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
