@@ -75,8 +75,9 @@
 				</tbody>
 		</table>
 	</div>
-
-		{{ $items->onEachSide(1)->links('vendor.pagination.tailwind') }}
+		<div wire:ignore>
+			{{ $items->onEachSide(1)->links('vendor.pagination.tailwind') }}
+		</div>
 
 		{{-- {{  var_export($items->map(fn($i) => $i->id)->implode(',')) }}
 
