@@ -15,18 +15,22 @@
 
 	<div class="py-12">
 			<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+				@if (session('status') === 'store-created')
+					<div 
+					x-data="{ show: true }"
+					x-show="show"
+					x-transition
+					x-init="setTimeout(() => show = false, 2000)"
+					 class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-2">
+						<div class="flex items-center gap-4 p-4">
+									<p class="text-sm text-green-600 dark:text-green-400">
+										{{ __('New Store Created.') }}
+									</p>
+						</div>
+					</div>
+				@endif
 					<div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-							<div class="flex items-center gap-4">
-								@if (session('status') === 'store-created')
-										<p
-												x-data="{ show: true }"
-												x-show="show"
-												x-transition
-												x-init="setTimeout(() => show = false, 2000)"
-												class="text-sm text-gray-600 dark:text-gray-400"
-										>{{ __('New Store Created.') }}</p>
-								@endif
-							</div>
+							
 							<div class="p-6 text-gray-900 dark:text-gray-100">
 									<livewire:components.table :user="$user" :model="'stores'">
 							</div>
