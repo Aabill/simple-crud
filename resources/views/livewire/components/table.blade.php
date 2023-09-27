@@ -53,10 +53,10 @@
 							if ($event.target.type=='checkbox') return;
 							$el.querySelector('input[type=checkbox]').click();"
 							class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-								<td class="px-6 py-4">
+								<td class="px-6 py-4 text-center">
 									<x-text-input type="checkbox" wire:click="toggleCheck({{ $item->id }}, {{ $key }})" class="m-1" custom-bind-check="{{ isset($checkbox[$key]) && $checkbox[$key] ? 'checked' : 'nope' }}"></x-text-input>
 								</td>	
-								<td class="px-6 py-4 text-right">
+								<td class="px-6 py-4 text-center">
 									<a href="{{ route('stores.edit', $item->id) }}" class="font-medium hover:bg-blue-600 dark:text-blue-500">
 										<x-secondary-button><x-heroicon-o-pencil-square class="w-5 h-5"/></x-secondary-button>
 									</a>
