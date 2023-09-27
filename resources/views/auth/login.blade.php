@@ -9,7 +9,7 @@
         <div x-data="{emailFocus: false}" class="relative group" x-bind:class="{'is-focused': emailFocus}">
             <x-input-label class="absolute top-2 left-2 cursor-text group-[.is-focused]:-top-2 group-[.is-focused]:left-4  group-[.is-focused]:rounded-md group-[.is-focused]:px-1 group-[.is-focused]:pb-[0.5px] group-[.is-focused]:text-[11px] group-[.is-focused]:bg-gray-800  transition-all ease-linear duration-100" for="email" :value="__('Email')" />
             <x-text-input id="email" 
-							x-init="$nextTick(() => { if($el.tagName == 'INPUT') $refs.loginEmail.classList.add('is-focused') });"
+							x-init="$nextTick(() => { if($el.tagName == 'INPUT') emailFocus = true });"
 							x-on:focus="emailFocus = true" 
 							x-on:blur="
 							if ($event.target.value !== '') return;
