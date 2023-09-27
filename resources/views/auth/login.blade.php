@@ -21,7 +21,7 @@
         <!-- Password -->
         <div x-data="{loginFocus:false}" class="mt-4 relative group" x-bind:class="{'is-focused' : loginFocus}">
             <x-input-label for="password" :value="__('Password')" 
-						class="absolute top-2 left-2 cursor-text group-[.is-focused]:-top-2 group-[.is-focused]:left-4  group-[.is-focused]:rounded-md group-[.is-focused]:px-1 group-[.is-focused]:pb-[0.5px] group-[.is-focused]:text-[11px] group-[.is-focused]:bg-gray-900  transition-all ease-linear duration-100"/>
+						class="absolute top-2 left-2 cursor-text group-[.is-focused]:-top-2 group-[.is-focused]:left-4  group-[.is-focused]:rounded-md group-[.is-focused]:px-1 group-[.is-focused]:pb-[0.5px] group-[.is-focused]:text-[11px] group-[.is-focused]:bg-gray-800  transition-all ease-linear duration-100"/>
 
             <x-text-input id="password" class="block mt-1 w-full"
 						x-on:focus="
